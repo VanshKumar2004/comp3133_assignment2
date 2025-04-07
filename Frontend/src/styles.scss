@@ -1,0 +1,145 @@
+/* src/styles.scss */
+
+/* Define a new set of CSS variables for easy theming */
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #264653;
+  --accent-color: #e9c46a;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --header-bg: #264653;
+  --footer-bg: #264653;
+  --button-bg: #2a9d8f;
+  --button-hover: #21867a;
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+}
+
+/* App Wrapper for page layout */
+#app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Container (no image placeholder) */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: var(--accent-color);
+}
+
+/* Main Content Styles */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+.app-footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Global Button Styling */
+button,
+.btn {
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+button:active,
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}

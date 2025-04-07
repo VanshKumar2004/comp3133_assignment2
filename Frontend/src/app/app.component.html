@@ -1,0 +1,24 @@
+<!-- src/app/app.component.html -->
+<header class="app-header">
+  <div class="header-container">
+    <div class="logo-container">
+      <h1>Employee Management Portal</h1>
+    </div>
+    <nav class="navigation">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/employees" routerLinkActive="active">Employees</a>
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+      <a routerLink="/signup" routerLinkActive="active">Signup</a>
+    </nav>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<footer class="app-footer">
+  <p>&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
